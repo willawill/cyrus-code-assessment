@@ -1,6 +1,6 @@
 class Record
-  include Comparable
-  ATTRIBUTES = :last_name, :first_name, :gender, :favoriate_color, :date_of_birth
+
+  ATTRIBUTES = :last_name, :first_name, :gender, :favorite_color, :date_of_birth
   ATTRIBUTES.each { |atr| attr_accessor atr }
   
   def initialize args
@@ -14,5 +14,10 @@ class Record
       false if self.send(atr) !=  anotherRecord.send(atr)
     end
     true
+  end
+
+  private
+  def to_s
+    "#{self.last_name} #{self.first_name} #{self.gender} #{self.date_of_birth} #{self.favorite_color}"
   end
 end
