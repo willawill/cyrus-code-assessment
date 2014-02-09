@@ -1,8 +1,8 @@
 require_relative "lib/require_helper.rb"
 
 task :display_records do |t|
-  parser = CommaParser.new("inputs/comma.txt")
-  raw_input = parser.parse_record_data + PipeParser.new("inputs/pipe.txt").parse_record_data
+  parser = 
+  raw_input = CommaParser.new("inputs/comma.txt").parse_record_data + PipeParser.new("inputs/pipe.txt").parse_record_data + SpaceParser.new("inputs/space.txt").parse_record_data
   records = RecordGenerator.generate_record_set(raw_input)
   display_manager = DisplayManager.new(records)
   puts "Output 1"
