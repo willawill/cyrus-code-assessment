@@ -9,6 +9,7 @@ class Record
     end
   end
 
+  protected
   def == anotherRecord
     ATTRIBUTES.each do |atr|
       false if self.send(atr) !=  anotherRecord.send(atr)

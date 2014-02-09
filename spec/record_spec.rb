@@ -9,13 +9,4 @@ describe Record do
     its(:favorite_color) { should eq "tan"}
     its(:date_of_birth) { should eq "2/13/1943"}
   end
-
-  describe "#==" do
-    it "should compare two records based on it's attributes values" do
-      record1 = Record.new(parameters)
-      record2 = Record.new(parameters)
-
-      expect(record1).to eq record2
-    end
-  end
 end
