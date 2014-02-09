@@ -1,5 +1,8 @@
-class SpaceParser
+class SpaceParser < DataParser
+  include AttributeHelper
+
   attr_accessor :raw_data
+
   def initialize file_name
     @raw_data = File.open(file_name, "r").map do |line|
       line.split(" ").collect!(&:strip)
@@ -17,18 +20,5 @@ class SpaceParser
                }
                end
     end
-
-  private
-  def normalize_gender gender
-    case gender.downcase
-    when "f" then"female"
-    when "m" then "male"
-    else
-      raise ArgumentError, "Gender can only be male or female"
-    end
-  end
-
-  def normalize_date date
-    date.gsub("-", "/")
-  end
+  register_reader :space
 end

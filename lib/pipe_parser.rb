@@ -1,4 +1,5 @@
-class PipeParser
+class PipeParser < DataParser
+  include AttributeHelper
   attr_accessor :raw_data
 
   def initialize file_name
@@ -18,18 +19,5 @@ class PipeParser
                }
                end
     end
-
-  private
-  def normalize_gender gender
-    case gender.downcase
-    when "f" then"female"
-    when "m" then "male"
-    else
-      raise ArgumentError, "Gender can only be male or female"
-    end
-  end
-
-  def normalize_date date
-    date.gsub("-", "/")
-  end
+  register_reader :pipe
 end

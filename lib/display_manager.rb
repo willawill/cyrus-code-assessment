@@ -26,7 +26,7 @@ class DisplayManager
   end
 
   def parse_date birth_date
-    month, day,year = birth_date.split("/")
-    Date.new(year.to_i, month.to_i, day.to_i)
+    month, day,year = birth_date.split("/") 
+    Date.new(year.to_i, month.to_i, day.to_i) rescue Date.new
   end
 end
