@@ -1,8 +1,4 @@
-require_relative "lib/comma_parser.rb"
-require_relative "lib/pipe_parser.rb"
-require_relative "lib/record.rb"
-require_relative "lib/display_manager.rb"
-require_relative "lib/record_generator.rb"
+require_relative "lib/require_helper.rb"
 
 task :display_records do |t|
   parser = CommaParser.new("spec/fixtures/comma.txt")
