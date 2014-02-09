@@ -16,7 +16,6 @@ class Record
     true
   end
 
-  private
   def to_s
     "#{self.last_name.capitalize} #{self.first_name.capitalize} #{self.gender.capitalize} #{self.date_of_birth} #{self.favorite_color.capitalize}"
   end

@@ -7,7 +7,8 @@ task :display_records do |t|
   display_manager = DisplayManager.new(records)
   puts "Output 1"
   puts display_manager.sorted_by_gender_then_last_name
-
+  puts "Output 2"
+  puts display_manager.sorted_by_birth_date
   puts "Output 3"
   puts display_manager.sorted_by_last_name
 end
