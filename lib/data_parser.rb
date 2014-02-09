@@ -1,4 +1,5 @@
 require 'csv'
+
 class DataParserNotFoundError < NameError; end
 class DataParser
   include AttributeHelper
