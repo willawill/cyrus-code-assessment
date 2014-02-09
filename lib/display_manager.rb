@@ -10,4 +10,11 @@ class DisplayManager
       [record1.gender, record1.last_name] <=> [record2.gender, record2.last_name]
     end
   end
+
+  def sorted_by_last_name
+    @record_set.sort do |record1, record2|
+      record2.last_name <=> record1.last_name
+    end
+  end
+
 end
