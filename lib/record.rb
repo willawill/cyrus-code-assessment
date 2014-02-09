@@ -5,7 +5,7 @@ class Record
   
   def initialize args
     args.each do |k, v|
-      instance_variable_set("@#{k}", v)
+      instance_variable_set("@#{k}", v) if ATTRIBUTES.include?(k)
     end
   end
 
