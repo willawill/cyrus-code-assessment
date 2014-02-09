@@ -1,4 +1,3 @@
-require 'pipe_parser.rb'
 describe "PipeParser" do
   let(:file_name) {"spec/fixtures/pipe.txt"}
   subject { PipeParser.new(file_name)}

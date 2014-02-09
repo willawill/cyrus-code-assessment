@@ -1,4 +1,3 @@
-require_relative "../lib/require_helper"
 describe SpaceParser do
   subject { SpaceParser.new("spec/fixtures/space.txt")}
 

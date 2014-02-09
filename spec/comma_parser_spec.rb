@@ -1,4 +1,3 @@
-require "comma_parser.rb"
 describe CommaParser do
   subject {CommaParser.new("spec/fixtures/comma.txt")}
   describe "#initialize" do
