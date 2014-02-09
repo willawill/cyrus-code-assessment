@@ -1,11 +1,12 @@
 require_relative "lib/comma_parser.rb"
+require_relative "lib/pipe_parser.rb"
 require_relative "lib/record.rb"
 require_relative "lib/display_manager.rb"
 require_relative "lib/record_generator.rb"
 
 task :display_records do |t|
   parser = CommaParser.new("spec/fixtures/comma.txt")
-  raw_input = parser.parse_record_data
+  raw_input = parser.parse_record_data + PipeParser.new("spec/fixtures/pipe.txt").parse_record_data
   records = RecordGenerator.generate_record_set(raw_input)
   display_manager = DisplayManager.new(records)
   puts "Output 1"

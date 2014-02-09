@@ -18,6 +18,6 @@ class Record
 
   private
   def to_s
-    "#{self.last_name} #{self.first_name} #{self.gender} #{self.date_of_birth} #{self.favorite_color}"
+    "#{self.last_name.capitalize} #{self.first_name.capitalize} #{self.gender.capitalize} #{self.date_of_birth} #{self.favorite_color.capitalize}"
   end
 end
