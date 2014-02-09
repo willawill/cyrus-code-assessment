@@ -6,8 +6,7 @@ describe CommaParser do
     end
   end
   describe "#parse_record_data" do
-   it "should parse data into record" do
-     subject.parse_record_data.should == [
+     specify { subject.parse_record_data.should eq [
          {
           last_name: "foo",
           first_name: "bar",
@@ -20,7 +19,6 @@ describe CommaParser do
             first_name: "qux",
             gender: "male",
             favorite_color: "yellow",
-            date_of_birth: "4/23/1967"}]
-    end
+            date_of_birth: "4/23/1967"}] }
   end
 end

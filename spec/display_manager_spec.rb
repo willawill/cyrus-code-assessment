@@ -3,7 +3,6 @@ require_relative "../lib/require_helper"
 describe ".displayManager" do
   let(:male_record)   { Record.new({last_name: "foo", first_name: "bar", gender: "male", date_of_birth: "12/3/1965", favorite_color: "red"})}
   let(:female_record) { Record.new({last_name: "baz", first_name: "quz", gender: "female", date_of_birth: "4/2/1922", favorite_color: "yellow"})}
-
   let(:record_set) {[male_record, female_record]}
 
   subject {DisplayManager.new(record_set)}
