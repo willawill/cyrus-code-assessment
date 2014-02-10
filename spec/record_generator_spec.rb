@@ -7,7 +7,6 @@ describe ".record_generator" do
   subject { RecordGenerator.generate_record_set([input1, input2])}
 
   it "should return an array of Record objects" do
-    expect(subject.size).to be 2
     expect(subject).to eq [Record.new(input1), Record.new(input2)]
   end
 end
