@@ -8,7 +8,7 @@ describe ".displayManager" do
   subject {DisplayManager.new(record_set)}
 
   describe "#sorted_by_gender_then_last_name" do
-      specify { subject.sorted_by_gender_then_last_name.first.should be female_record }
+    specify { subject.sorted_by_gender_then_last_name.first.should be female_record }
 
     context "same genders" do
       let(:anoter_female) { Record.new({last_name: "zoo", first_name: "goo", gender: "female", date_of_birth: "4/2/1956", favorite_color: "yellow"}) }
