@@ -11,10 +11,13 @@ class Record
 
   protected
   def == anotherRecord
+    true if all_the_attributes_are_identical anotherRecord
+  end
+
+  def all_the_attributes_are_identical anotherRecord
     ATTRIBUTES.each do |atr|
       false if self.send(atr) !=  anotherRecord.send(atr)
     end
-    true
   end
 
   def to_s
